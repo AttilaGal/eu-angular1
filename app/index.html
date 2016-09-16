@@ -27,7 +27,7 @@
                 <th>type</th>
             </tr>
 
-            <tr ng-repeat="pokemon in pokedex | filter:pokename | filter:poketype">
+            <tr ng-repeat="pokemon in pokedex">
                 <td>{{pokemon.id}}</td>
                 <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
                 <td>{{pokemon.name}}</td>
