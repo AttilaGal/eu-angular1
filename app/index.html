@@ -13,11 +13,6 @@
 
     <h1>PokéDex</h1>
 
-    <div class="filter col-sm-6 col-sm-offset-3">
-        <input id="name" placeholder="Pokemon" type="text">
-        <input id="name" placeholder="Type" type="text">
-    </div>
-
     <div class="poke-list col-sm-6 col-sm-offset-3">
         <table class="table">
             <tr>
@@ -25,15 +20,6 @@
                 <th>image</th>
                 <th>name</th>
                 <th>type</th>
-            </tr>
-
-            <tr ng-repeat="pokemon in pokedex">
-                <td>{{pokemon.id}}</td>
-                <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
-                <td>{{pokemon.name}}</td>
-                <td>
-                    <span ng-repeat="type in pokemon.type">{{type}}</span>
-                </td>
             </tr>
 
         </table>
