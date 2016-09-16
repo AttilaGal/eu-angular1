@@ -9,7 +9,7 @@
                 totalItems: '@',
                 perPage: '@'
             },
-            templateUrl: 'poke-list/paging/paging.template.html',
+            templateUrl: 'poke-search/poke-list/paging/paging.template.html',
             controller: PagingController
         });
 
