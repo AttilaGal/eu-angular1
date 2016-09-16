@@ -1,20 +1,27 @@
 <div class="poke-list col-sm-6 col-sm-offset-3">
-        <table class="table">
-            <tr class="table-shadow">
-                <th>#</th>
-                <th>image</th>
-                <th>name</th>
-                <th>type</th>
-            </tr>
-            <tr ng-repeat="pokemon in pokeListCtrl.pokedex | filter:pokeListCtrl.pokename | filter:pokeListCtrl.poketype"
-                ng-class="$odd ? 'table-shadow' : '' "
-                ng-click="pokeListCtrl.evolutionInfo(pokemon.name, pokemon.id)">
-                <td>{{pokemon.id | numberformat}}</td>
-                <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
-                <td>{{pokemon.name | titlecase}} <img ng-show="pokeListCtrl.isLoading(pokemon.id)" src="../../img/loading.gif" ></td>
-                <td>
-                    <span class="type" ng-class="pokeListCtrl.classType(type)" ng-repeat="type in pokemon.type">{{type}}</span>
-                </td>
-            </tr>
-        </table>
+    <table class="table">
+        <tr class="table-shadow">
+            <th>#</th>
+            <th>image</th>
+            <th>name</th>
+            <th>type</th>
+        </tr>
+        <tr ng-repeat="pokemon in pokeListCtrl.filteredPage | filter:pokeListCtrl.pokename | filter:pokeListCtrl.poketype"
+            ng-class="$odd ? 'table-shadow' : '' "
+            ng-click="pokeListCtrl.evolutionInfo(pokemon.name, pokemon.id)">
+            <td>{{pokemon.id | numberformat}}</td>
+            <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
+            <td>{{pokemon.name | titlecase}} <img ng-show="pokeListCtrl.isLoading(pokemon.id)" src="../../img/loading.gif" ></td>
+            <td>
+                <span class="type" ng-class="pokeListCtrl.classType(type)" ng-repeat="type in pokemon.type">{{type}}</span>
+            </td>
+        </tr>
+    </table>
+
+    <div ng-if="pokeListCtrl.filteredPokemon.length > 10">
+        <paging total-items="{{pokeListCtrl.filteredPokemon.length}}"
+                per-page="10"
+                callback="pokeListCtrl.pageChange(page)">
+        </paging>
     </div>
+</div>

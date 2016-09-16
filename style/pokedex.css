@@ -80,3 +80,9 @@ input[type="text"].focus {
 .type-dark { background-color: #705848; border-color: #362a23 !important; }
 .type-fairy { background-color: #e898e8; border-color: #d547d5 !important; }
 .type-curse { background-color: #68a090; border-color: #41685d !important; }
+
+.pager li a {
+    background-color: #ffea12;
+    border: none;
+    cursor: pointer;
+}
