@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="PokeDexApp">
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/png" href="../img/pokeball.png"/>
     <script src="../node_modules/angular/angular.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="pokeListCtrl.js"></script>
+
     <title>EU PokeDex</title>
     <link rel="stylesheet"
           href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -18,7 +22,7 @@
         <input ng-model="poketype" id="name" placeholder="Type" type="text">
     </div>
 
-    <div class="poke-list col-sm-6 col-sm-offset-3">
+    <div ng-controller="pokeListController as pokeListCtrl"  class="poke-list col-sm-6 col-sm-offset-3">
         <table class="table">
             <tr>
                 <th>#</th>
