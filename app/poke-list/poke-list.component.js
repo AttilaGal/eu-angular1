@@ -2,13 +2,13 @@
 'use strict';
 
     angular
-        .module('PokeDexApp')
+        .module('poke-list')
         .component('pokeList', {
             bindings: {
                 pokename: '@',
                 poketype: '@'
             },
-            templateUrl: 'poke-list.template.html',
+            templateUrl: 'poke-list/poke-list.template.html',
             controller: PokeListController,
             controllerAs: 'pokeListCtrl'
         });

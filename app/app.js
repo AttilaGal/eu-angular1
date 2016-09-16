@@ -2,6 +2,9 @@
 		"use strict";
 
 		angular
-				.module('PokeDexApp', []);
+				.module('PokeDexApp', [
+						'poke.filters',
+						'poke-list'
+				]);
 
 })();

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('PokeDexApp')
+        .module('poke.filters')
         .filter('numberformat', filterFunction);
     
     function filterFunction(){
