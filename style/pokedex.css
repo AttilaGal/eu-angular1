@@ -52,3 +52,31 @@ input[type="text"].focus {
 .table-shadow {
     background-color: rgba(0,0,0,.2);
 }
+
+
+/* Pokemon Types*/
+.type{
+    color: white;
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+.type-normal { background-color: #8a8a59; border-color: #79794e !important; }
+.type-fire { background-color: #f08030; border-color: #b4530d !important; }
+.type-water { background-color: #6890f0; border-color: #1753e3 !important; }
+.type-electric { background-color: #f8d030; border-color: #c19b07 !important; }
+.type-grass { background-color: #78c850; border-color: #4a892b !important; }
+.type-ice { background-color: #98d8d8; border-color: #45b6b6 !important; }
+.type-fighting { background-color: #c03028; border-color: #82211b !important; }
+.type-poison { background-color: #a040a0; border-color: #662966 !important; }
+.type-ground { background-color: #e0c068; border-color: #aa8623 !important; }
+.type-flying { background-color: #a890f0; border-color: #7762b6 !important; }
+.type-psychic { background-color: #f85888; border-color: #d60945 !important; }
+.type-bug { background-color: #a8b820; border-color: #616b13 !important; }
+.type-rock { background-color: #b8a038; border-color: #746523 !important; }
+.type-ghost { background-color: #705898; border-color: #413359 !important; }
+.type-dragon { background-color: #7038f8; border-color: #3d07c0 !important; }
+.type-steel { background-color: #b8b8d0; border-color: #7a7aa7 !important; }
+.type-dark { background-color: #705848; border-color: #362a23 !important; }
+.type-fairy { background-color: #e898e8; border-color: #d547d5 !important; }
+.type-curse { background-color: #68a090; border-color: #41685d !important; }
