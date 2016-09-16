@@ -8,7 +8,7 @@
             </tr>
             <tr ng-repeat="pokemon in pokeListCtrl.pokedex | filter:pokeListCtrl.pokename | filter:pokeListCtrl.poketype"
                 ng-class="$odd ? 'table-shadow' : '' "
-                ng-click="pokeListCtrl.pokeInfo(pokemon.name)">
+                ng-click="pokeListCtrl.evolutionInfo(pokemon.name, pokemon.id)">
                 <td>{{pokemon.id | numberformat}}</td>
                 <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
                 <td>{{pokemon.name | titlecase}}</td>
