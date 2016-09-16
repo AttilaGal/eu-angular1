@@ -1,0 +1,50 @@
+@font-face {
+    font-family: pokemon;
+    src: url(Pokemon_Hollow.ttf);
+}
+
+textarea, input { outline: none; }
+
+body{
+    background-color: #3861ff;
+    color: white;
+}
+h1{
+    font-family: pokemon;
+    color: #ffea12;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 15px;
+  border: none;
+  background-color: #3861ff;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px white;
+}
+
+.filter{
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.poke-list table tr td {
+    vertical-align: middle !important;
+}
+
+.poke-list table tr td img {
+    width: 30px;
+    height: 30px;
+}
+
+.poke-list table tr td span {
+    margin-right: 5px;
+}
