@@ -40,7 +40,7 @@
                 <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
                 <td>{{pokemon.name | titlecase}}</td>
                 <td>
-                    <span ng-repeat="type in pokemon.type">{{type}}</span>
+                    <span class="type" ng-repeat="type in pokemon.type">{{type}}</span>
                 </td>
             </tr>
         </table>
