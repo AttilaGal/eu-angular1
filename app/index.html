@@ -6,9 +6,9 @@
     <script src="../node_modules/angular/angular.min.js"></script>
 
     <script src="app.js"></script>
-    <script src="pokeListCtrl.js"></script>
     <script src="numberformatFilter.js"></script>
     <script src="titlecaseFilter.js"></script>
+    <script src="poke-list.component.js"></script>
 
     <title>EU PokeDex</title>
     <link rel="stylesheet"
@@ -24,26 +24,6 @@
         <input ng-model="poketype" id="name" placeholder="Type" type="text">
     </div>
 
-    <div ng-controller="pokeListController as pokeListCtrl"  class="poke-list col-sm-6 col-sm-offset-3">
-        <table class="table">
-            <tr>
-                <th>#</th>
-                <th>image</th>
-                <th>name</th>
-                <th>type</th>
-            </tr>
-
-            <tr ng-repeat="pokemon in pokeListCtrl.pokedex | filter:pokename | filter:poketype"
-                ng-class="$odd ? 'table-shadow' : '' "
-                ng-click="pokeListCtrl.isAwesome(pokemon.name)">
-                <td>{{pokemon.id | numberformat}}</td>
-                <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
-                <td>{{pokemon.name | titlecase}}</td>
-                <td>
-                    <span class="type" ng-repeat="type in pokemon.type">{{type}}</span>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <poke-list pokename="{{pokename}}" poketype="{{poketype}}"></poke-list>
 </body>
 </html>
