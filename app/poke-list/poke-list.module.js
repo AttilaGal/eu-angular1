@@ -2,6 +2,8 @@
     "use strict";
     
     angular
-        .module('poke-list', []);
+        .module('poke-list', [
+										'poke-service'
+								]);
   
 })();
