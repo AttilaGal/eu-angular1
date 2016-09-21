@@ -4,7 +4,15 @@
 		angular
 				.module('PokeDexApp', [
 						'poke.filters',
-						'poke-search'
-				]);
+						'poke-search',
+						'ui.router'
+				])
+
+		angular.module('PokeDexApp')
+				.config(function($urlRouterProvider){
+						$urlRouterProvider.otherwise('/search');
+				});
+
+
 
 })();

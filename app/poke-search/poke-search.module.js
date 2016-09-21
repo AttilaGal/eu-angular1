@@ -3,6 +3,7 @@
 
 		angular.module('poke-search', [
 				'poke-service',
-				'poke-list'
+				'poke-list',
+				'ui.router'
 		]);
 })();
