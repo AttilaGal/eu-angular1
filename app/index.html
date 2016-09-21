@@ -8,11 +8,13 @@
     <script src="app.js"></script>
 
     <script src="filters/filters.module.js"></script>
+    <script src="poke-search/poke-search.module.js"></script>
     <script src="poke-search/poke-list/poke-list.module.js"></script>
     <script src="poke-service/poke-service.module.js"></script>
 
     <script src="filters/numberformatFilter.js"></script>
     <script src="filters/titlecaseFilter.js"></script>
+    <script src="poke-search/poke-search.component.js"></script>
     <script src="poke-search/poke-list/poke-list.component.js"></script>
     <script src="poke-search/poke-list/paging/paging.component.js"></script>
     <script src="poke-service/poke-service.service.js"></script>
@@ -27,11 +29,6 @@
 
     <h1>PokéDex</h1>
 
-    <div class="filter col-sm-6 col-sm-offset-3">
-        <input ng-model="pokename" id="name" placeholder="Pokemon" type="text">
-        <input ng-model="poketype" id="name" placeholder="Type" type="text">
-    </div>
-
-    <poke-list pokename="{{pokename}}" poketype="{{poketype}}"></poke-list>
+    <poke-search></poke-search>
 </body>
 </html>

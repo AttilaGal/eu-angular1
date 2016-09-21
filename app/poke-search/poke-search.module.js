@@ -1,7 +1,8 @@
 (function() {
-    'use strict';
+		'use strict';
 
-    angular.module('poke-search', [
-        'poke-service'
-    ]);
+		angular.module('poke-search', [
+				'poke-service',
+				'poke-list'
+		]);
 })();

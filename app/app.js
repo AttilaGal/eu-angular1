@@ -4,7 +4,7 @@
 		angular
 				.module('PokeDexApp', [
 						'poke.filters',
-						'poke-list'
+						'poke-search'
 				]);
 
 })();
