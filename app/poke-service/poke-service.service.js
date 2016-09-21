@@ -9,6 +9,7 @@
 		function PokeService(POKEDATA, $http, $q) {
 				var service = {
 						getAll: getAll,
+						getById: getById,
 						getEvolutionById: getEvolutionById
 				};
 				return service;
@@ -16,6 +17,10 @@
 				//function implementations
 				function getAll(){
 						return POKEDATA.pokedex;
+				}
+
+				function getById(id){
+						return POKEDATA.pokedex.filter(function(p){return p.id ==id})[0];
 				}
 
 				function getEvolutionById(id){

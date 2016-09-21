@@ -86,3 +86,203 @@ input[type="text"].focus {
     border: none;
     cursor: pointer;
 }
+
+/* poke-menu */
+
+body {
+    background-color: #3861ff;
+}
+
+.poke-menu {
+    width: 400px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.poke-menu div {
+    margin: 15px;
+    cursor: pointer;
+    background-color: #ff0000;
+    -webkit-transform: skew(-5deg);
+    -moz-transform: skew(-5deg);
+    -o-transform: skew(-5deg);
+    border-radius: 3px;
+    border: 2px solid #dcdcdc;
+    width: 70px;
+    height: 30px;
+    transition: all .1s ease-in-out;
+}
+.poke-menu div a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.poke-menu div a:hover {
+    text-decoration: none;
+}
+.poke-menu div:hover {
+    text-decoration: none;
+    background-color: #b20000;
+    width: 80px;
+    height: 35px;
+}
+
+/* poke-detail */
+body {
+    background-color: #3861ff;
+}
+
+.poke-menu {
+    width: 400px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.poke-menu div {
+    margin: 15px;
+    cursor: pointer;
+    background-color: #ff0000;
+    -webkit-transform: skew(-5deg);
+    -moz-transform: skew(-5deg);
+    -o-transform: skew(-5deg);
+    border-radius: 3px;
+    border: 2px solid #dcdcdc;
+    width: 70px;
+    height: 30px;
+    transition: all .1s ease-in-out;
+}
+.poke-menu div a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.poke-menu div a:hover {
+    text-decoration: none;
+}
+.poke-menu div:hover {
+    text-decoration: none;
+    background-color: #b20000;
+    width: 80px;
+    height: 35px;
+}
+
+.poke-detail-top{
+    display: flex;
+    align-items: center;
+}
+.poke-image {
+    margin: 0 auto;
+    width: 194px;
+    height: 194px;
+    border: 1px solid white !important;
+    border-radius: 97px;
+}
+.poke-image img {
+    width: 192px;
+    height: 192px;
+}
+.poke-detail{
+    margin-top: 20px;
+}
+.poke-detail h2 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+.poke-detail h3 {
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+.poke-detail .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+}
+.poke-detail .stats div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    min-width: 10px;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.poke-detail .stats div svg {
+    width: 50px;
+    height: 50px;
+}
+.poke-detail .stats div p {
+    margin-left: 10px;
+}
+.poke-detail .stats .attack svg {
+    fill: lightgrey;
+}
+.poke-detail .stats .hp svg {
+    fill: red;
+}
+.poke-detail .stats .defense svg {
+    fill: lightblue;
+}
+.poke-detail .moves {
+    font-size: 1.5em;
+    font-style: italic;
+}
+.poke-detail .detail-type-section {
+    display: flex;
+    justify-content: space-around;
+}
+.poke-detail .detail-type {
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    border: 2px solid;
+    font-size: 1.5em;
+}
+
+.chevron{
+    cursor: pointer;
+}
+
+.chevron::before {
+    color: rgba(255, 255, 255, .7);
+    border-style: solid;
+    border-width: 0.15em 0.15em 0 0;
+    content: '';
+    display: inline-block;
+    height: 4em;
+    left: 0.15em;
+    position: relative;
+    top: 0.15em;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 4em;
+}
+.chevron:hover{
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.chevron.right:before {
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.chevron.left:before {
+    left: 0.25em;
+    transform: rotate(-135deg);
+}

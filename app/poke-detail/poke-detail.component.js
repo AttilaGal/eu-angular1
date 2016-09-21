@@ -9,13 +9,25 @@
 				id: '<'
 			},
 			controller: PokeDetailController
-		});
+		})
+			.config(function($stateProvider){
+					$stateProvider
+							.state('detail',{
+									url: '/detail/:id',
+									component: 'pokeDetail',
+									resolve: {
+											id: function($stateParams){
+													return $stateParams.id;
+											}
+									}
+							});
+			});
 	
-	PokeDetailController.$inject = ['PokeService', '$state'];
-	function PokeDetailController(PokeService, $state){
+	PokeDetailController.$inject = ['pokeService', '$state'];
+	function PokeDetailController(pokeService, $state){
 		var vm = this;
 		
-		vm.pokemon = PokeService.getById(vm.id) ;
+		vm.pokemon = pokeService.getById(vm.id) ;
 
 		vm.classType = function (type) {
 			return "type-" + type;
