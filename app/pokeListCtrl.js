@@ -13,7 +13,11 @@
 		
 				vm.isAwesome = function (name) {
 						alert(name + ' is AWESOME!');
-				}
+				};
+
+				vm.getTypeClass = function(type) {
+						return 'type-' + type;
+				};
 		}
 
 })();
