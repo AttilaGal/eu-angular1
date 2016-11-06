@@ -1,10 +1,10 @@
-(function(){
-		"use strict";
+(function () {
+  "use strict";
 
-		angular
-				.module('PokeDexApp', [
-						'poke.filters',
-						'poke-search'
-				]);
+  angular
+    .module('PokeDexApp', [
+      'poke.filters',
+      'poke-search'
+    ]);
 
 })();
