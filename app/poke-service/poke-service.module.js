@@ -1,7 +1,7 @@
-(function(){
-    "use strict";
-    
-    angular
-        .module('poke-service', []);
-  
+(function () {
+  "use strict";
+
+  angular
+    .module('poke-service', []);
+
 })();
