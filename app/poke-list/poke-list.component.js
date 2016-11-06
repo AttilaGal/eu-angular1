@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -21,20 +21,20 @@
     vm.currentPage = 1;
     vm.filteredPage = sliceToPage(pokeService.getAll());
 
-    vm.evolutionInfo = function(pokename, id){
-      if(!vm.loading){
+    vm.evolutionInfo = function (pokename, id) {
+      if (!vm.loading) {
         vm.loading = id;
         pokeService.getEvolutionById(id).then(
-          function success(evolution){
+          function success(evolution) {
             var message;
-            if(evolution){
+            if (evolution) {
               message = pokename + ' evolves into ' + evolution + '!';
-            }else{
+            } else {
               message = pokename + ' has no evolution.'
             }
             alert(message);
           },
-          function error(){
+          function error() {
             alert('failed to retrieve pokemon evolution');
           }
         ).finally(function () {
@@ -43,45 +43,49 @@
       }
     };
 
-    vm.classType = function(type){
+    vm.classType = function (type) {
       return 'type-' + type;
     };
 
     vm.pokedex = pokeService.getAll();
 
-    vm.isLoading = function(id){
+    vm.isLoading = function (id) {
       return vm.loading == id;
     };
 
     //paging related
-    
-    vm.pageChange = function(page){
+
+    vm.pageChange = function (page) {
       vm.currentPage = page;
       vm.filteredPage = sliceToPage(vm.filteredPokemon);
     };
 
     vm.$onChanges = function (changesObj) {
       if (changesObj.pokename || changesObj.poketype) {
-        vm.filteredPage = sliceToPage( pokeService.getAll().filter(filterByName).filter(filterByType) );
+        vm.filteredPage = sliceToPage(pokeService.getAll().filter(filterByName).filter(filterByType));
       }
     };
-    
+
     //helper functions
 
-    function filterByName(p){
+    function filterByName(p) {
       return p.name.indexOf(vm.pokename) > -1;
     };
 
-    function filterByType(p){
+    function filterByType(p) {
       var containstype = false;
-      p.type.forEach(function(t){ t.indexOf(vm.poketype) > -1 ? containstype = true : null});
+      p.type.forEach(function (t) {
+        t.indexOf(vm.poketype) > -1 ? containstype = true : null
+      });
       return containstype;
     };
 
-    function sliceToPage(array){
+    function sliceToPage(array) {
       vm.filteredPokemon = array;
-      return array.sort(function(a, b){ return a.id - b.id })
-        .slice((vm.currentPage-1)*10, (vm.currentPage-1)*10 + 10);
+      return array.sort(function (a, b) {
+          return a.id - b.id
+        })
+        .slice((vm.currentPage - 1) * 10, (vm.currentPage - 1) * 10 + 10);
     };
   }
 })();
