@@ -1,6 +1,6 @@
-(function(){
-    "use strict";
-    
-    angular
-        .module('poke.filters', []);
+(function () {
+  "use strict";
+
+  angular
+    .module('poke.filters', []);
 })();

@@ -1,10 +1,10 @@
-(function(){
-    "use strict";
+(function () {
+  "use strict";
 
-    angular
-        .module('poke-detail', [
-			'poke-service',
-			'ui.router'
-		]);
+  angular
+    .module('poke-detail', [
+      'poke-service',
+      'ui.router'
+    ]);
 
 })();

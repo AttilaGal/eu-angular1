@@ -1,36 +1,36 @@
-(function(){
-	"use strict";
+(function () {
+  "use strict";
 
-	angular
-		.module('poke-detail')
-		.component('pokeDetail', {
-			templateUrl: 'poke-detail/poke-detail.template.html',
-			bindings: {
-				id: '<'
-			},
-			controller: PokeDetailController
-		});
-	
-	PokeDetailController.$inject = ['PokeService', '$state'];
-	function PokeDetailController(PokeService, $state){
-		var vm = this;
-		
-		vm.pokemon = PokeService.getById(vm.id) ;
+  angular
+    .module('poke-detail')
+    .component('pokeDetail', {
+      templateUrl: 'poke-detail/poke-detail.template.html',
+      bindings: {
+        id: '<'
+      },
+      controller: PokeDetailController
+    });
 
-		vm.classType = function (type) {
-			return "type-" + type;
-		};
+  PokeDetailController.$inject = ['PokeService', '$state'];
+  function PokeDetailController(PokeService, $state) {
+    var vm = this;
 
-		vm.previous = function(){
-			vm.id > 1 ?  $state.go('detail', {id: vm.id--}) : null ;
-		};
+    vm.pokemon = PokeService.getById(vm.id);
 
-		vm.next = function(){
-			vm.id < 151 ?  $state.go('detail', {id: vm.id++}) : null ;
-		};
+    vm.classType = function (type) {
+      return "type-" + type;
+    };
+
+    vm.previous = function () {
+      vm.id > 1 ? $state.go('detail', {id: vm.id--}) : null;
+    };
+
+    vm.next = function () {
+      vm.id < 151 ? $state.go('detail', {id: vm.id++}) : null;
+    };
 
 
-	}
+  }
 
 })();
 
