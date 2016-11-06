@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -18,20 +18,20 @@
     var vm = this;
     vm.loading = null;
 
-    vm.evolutionInfo = function(pokename, id){
-      if(!vm.loading){
+    vm.evolutionInfo = function (pokename, id) {
+      if (!vm.loading) {
         vm.loading = id;
         pokeService.getEvolutionById(id).then(
-          function success(evolution){
+          function success(evolution) {
             var message;
-            if(evolution){
+            if (evolution) {
               message = pokename + ' evolves into ' + evolution + '!';
-            }else{
+            } else {
               message = pokename + ' has no evolution.'
             }
             alert(message);
           },
-          function error(){
+          function error() {
             alert('failed to retrieve pokemon evolution');
           }
         ).finally(function () {
@@ -40,13 +40,13 @@
       }
     };
 
-    vm.classType = function(type){
+    vm.classType = function (type) {
       return 'type-' + type;
     };
 
     vm.pokedex = pokeService.getAll();
 
-    vm.isLoading = function(id){
+    vm.isLoading = function (id) {
       return vm.loading == id;
     }
   }
