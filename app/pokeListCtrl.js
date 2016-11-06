@@ -1,16 +1,16 @@
-(function(){
-		"use strict";
+(function () {
+  "use strict";
 
-		angular
-				.module('PokeDexApp')
-				.controller('pokeListController', PokeListController);
+  angular
+    .module('PokeDexApp')
+    .controller('pokeListController', PokeListController);
 
-		function PokeListController(){
-				//controller logic
-				var vm = this;
-				vm.clicked = function () {
-						alert('clicked')
-				}
-		}
+  function PokeListController() {
+    //controller logic
+    var vm = this;
+    vm.clicked = function () {
+      alert('clicked')
+    }
+  }
 
 })();
