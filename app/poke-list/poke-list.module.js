@@ -1,9 +1,9 @@
-(function(){
-    "use strict";
-    
-    angular
-        .module('poke-list', [
-										'poke-service'
-								]);
-  
+(function () {
+  "use strict";
+
+  angular
+    .module('poke-list', [
+      'poke-service'
+    ]);
+
 })();

@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -17,24 +17,24 @@
   function PokeListController(pokeService) {
     var vm = this;
 
-    vm.evolutionInfo = function(pokename, id){
+    vm.evolutionInfo = function (pokename, id) {
       pokeService.getEvolutionById(id).then(
-        function success(evolution){
+        function success(evolution) {
           var message;
-          if(evolution){
+          if (evolution) {
             message = pokename + ' evolves into ' + evolution + '!';
-          }else{
+          } else {
             message = pokename + ' has no evolution.'
           }
           alert(message);
         },
-        function error(){
+        function error() {
           alert('failed to retrieve pokemon evolution');
         }
       );
     };
 
-    vm.classType = function(type){
+    vm.classType = function (type) {
       return 'type-' + type;
     };
 
