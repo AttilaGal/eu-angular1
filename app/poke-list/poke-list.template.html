@@ -11,7 +11,7 @@
                 ng-click="pokeListCtrl.evolutionInfo(pokemon.name, pokemon.id)">
                 <td>{{pokemon.id | numberformat}}</td>
                 <td><img ng-src="../img/{{pokemon.id}}.png" /></td>
-                <td>{{pokemon.name | titlecase}} <img ng-show="pokeListCtrl.isLoading(pokemon.id)" src="../../img/loading.gif" ></td>
+                <td>{{pokemon.name | titlecase}} <img ng-show="pokeListCtrl.isLoading(pokemon.id)" ng-src="../../img/loading.gif" ></td>
                 <td>
                     <span class="type" ng-class="pokeListCtrl.classType(type)" ng-repeat="type in pokemon.type">{{type}}</span>
                 </td>
