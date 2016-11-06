@@ -1,7 +1,7 @@
-(function(){
-    "use strict";
-    
-    angular
-        .module('poke-list', []);
-  
+(function () {
+  "use strict";
+
+  angular
+    .module('poke-list', []);
+
 })();
