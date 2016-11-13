@@ -26,7 +26,6 @@
     }
     
     function setCurrentPage(page){
-      console.log('setting page: ' + JSON.stringify(page));
       vm.store.currentPage = page;
       vm.listeners['page-change'] ? vm.listeners['page-change']() : null;
     }
