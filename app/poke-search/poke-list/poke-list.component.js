@@ -8,7 +8,7 @@
         pokename: '@',
         poketype: '@'
       },
-      templateUrl: 'poke-list/poke-list.template.html',
+      templateUrl: 'poke-search/poke-list/poke-list.template.html',
       controller: PokeListController,
       controllerAs: 'pokeListCtrl'
     });
