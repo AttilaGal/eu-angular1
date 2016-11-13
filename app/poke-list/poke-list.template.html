@@ -20,8 +20,7 @@
 
     <div ng-if="pokeListCtrl.filteredPokemon.length > 10">
         <paging total-items="{{pokeListCtrl.filteredPokemon.length}}"
-                per-page="10"
-                callback="pokeListCtrl.pageChange(page)">
+                per-page="10">
         </paging>
     </div>
 </div>
